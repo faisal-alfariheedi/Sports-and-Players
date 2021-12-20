@@ -17,6 +17,9 @@
 		3A4A36F9277068CC00323806 /* Sports_and_PlayersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A36F8277068CC00323806 /* Sports_and_PlayersTests.swift */; };
 		3A4A3703277068CC00323806 /* Sports_and_PlayersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A3702277068CC00323806 /* Sports_and_PlayersUITests.swift */; };
 		3A4A3705277068CC00323806 /* Sports_and_PlayersUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A4A3704277068CC00323806 /* Sports_and_PlayersUITestsLaunchTests.swift */; };
+		3A63E5B92770EE1E00205C27 /* SportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5B82770EE1E00205C27 /* SportTableViewController.swift */; };
+		3A63E5BB2770EE3200205C27 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5BA2770EE3200205C27 /* PlayerTableViewController.swift */; };
+		3A63E5BD2770EEDC00205C27 /* main	TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5BC2770EEDC00205C27 /* main	TableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		3A4A36FE277068CC00323806 /* Sports and PlayersUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sports and PlayersUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A4A3702277068CC00323806 /* Sports_and_PlayersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports_and_PlayersUITests.swift; sourceTree = "<group>"; };
 		3A4A3704277068CC00323806 /* Sports_and_PlayersUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sports_and_PlayersUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		3A63E5B82770EE1E00205C27 /* SportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewController.swift; sourceTree = "<group>"; };
+		3A63E5BA2770EE3200205C27 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
+		3A63E5BC2770EEDC00205C27 /* main	TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "main\tTableViewCell.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,9 @@
 				3A4A36E0277068CA00323806 /* SceneDelegate.swift */,
 				3A4A36E2277068CA00323806 /* ViewController.swift */,
 				3A4A36E4277068CA00323806 /* Main.storyboard */,
+				3A63E5B82770EE1E00205C27 /* SportTableViewController.swift */,
+				3A63E5BC2770EEDC00205C27 /* main	TableViewCell.swift */,
+				3A63E5BA2770EE3200205C27 /* PlayerTableViewController.swift */,
 				3A4A36EA277068CB00323806 /* Assets.xcassets */,
 				3A4A36EC277068CB00323806 /* LaunchScreen.storyboard */,
 				3A4A36EF277068CB00323806 /* Info.plist */,
@@ -262,6 +271,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A4A36E3277068CA00323806 /* ViewController.swift in Sources */,
+				3A63E5B92770EE1E00205C27 /* SportTableViewController.swift in Sources */,
+				3A63E5BD2770EEDC00205C27 /* main	TableViewCell.swift in Sources */,
+				3A63E5BB2770EE3200205C27 /* PlayerTableViewController.swift in Sources */,
 				3A4A36DF277068CA00323806 /* AppDelegate.swift in Sources */,
 				3A4A36E1277068CA00323806 /* SceneDelegate.swift in Sources */,
 				3A4A36E9277068CA00323806 /* Sports_and_Players.xcdatamodeld in Sources */,
