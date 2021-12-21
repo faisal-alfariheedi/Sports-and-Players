@@ -7,11 +7,12 @@
         <relationship name="sport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="player" inverseEntity="Sport"/>
     </entity>
     <entity name="Sport" representedClassName=".Sport" syncable="YES" codeGenerationType="class">
+        <attribute name="img" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="player" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Player" inverseName="sport" inverseEntity="Player"/>
     </entity>
     <elements>
-        <element name="Sport" positionX="-363.9810180664062" positionY="-107.0347900390625" width="128" height="73"/>
         <element name="Player" positionX="-54" positionY="-9" width="128" height="103"/>
+        <element name="Sport" positionX="-363.9810180664062" positionY="-107.0347900390625" width="128" height="74"/>
     </elements>
 </model>

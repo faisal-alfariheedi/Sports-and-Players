@@ -9,6 +9,7 @@ import UIKit
 import CoreData
 
 class SportTableViewController: UITableViewController {
+    @IBOutlet var table: UITableView!
     
     var splist=[Sport]()
     let cr=(UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -17,6 +18,8 @@ class SportTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         getall()
+        table.delegate=self
+        table.dataSource=self
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -33,14 +36,57 @@ class SportTableViewController: UITableViewController {
         }catch{
             print(error)
         }
+        
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-            let nv = segue.destination as! UINavigationController
-            let seg = nv.topViewController! as! PlayerTableViewController
-            
-            
+        let seg = segue.destination as! PlayerTableViewController
+        seg.sp = splist[(sender as! IndexPath ).row]
+        
     }
+    func addcr(spn:String){
+        var temp = Sport(context: cr)
+        temp.name=spn
+       
+        if cr.hasChanges {
+            do {
+                try cr.save()
+                print("Success")
+            } catch {
+                print("\(error)")
+            }
+        }
+        getall()
+        
+    }
+    
+    @IBAction func add(_ sender: UIBarButtonItem) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "add sport", message: "", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField) in
+            textField.placeholder = "sport name"
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [self, weak alert] (_) in
+            let textField = alert!.textFields![0] // Force unwrapping because we know it exists.
+            addcr(spn: textField.text!)
+            table.reloadData()
+            print("Text field: \(textField.text)")
+            
+            
+        }))
+        alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { [self, weak alert] (_) in
+            print("cancel")
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+        
+    }
+    
     
 
     // MARK: - Table view data source
@@ -54,12 +100,20 @@ class SportTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return splist.count
     }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        performSegue(withIdentifier: "toplayer", sender: indexPath)
+    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "spcell", for: indexPath) as! main_TableViewCell
         cell.sport.text=splist[indexPath.row].name
-        cell.sp=splist[indexPath.row]
+        cell.sp=indexPath.row
+        cell.own=self
+        if let image = splist[indexPath.row].img {
+            cell.img.image = UIImage(data: image)
+            cell.addimg.isHidden=true
+        }
         // Configure the cell...
 
         return cell

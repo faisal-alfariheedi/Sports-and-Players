@@ -11,7 +11,7 @@
         <scene sceneID="W1i-IQ-2Hu">
             <objects>
                 <tableViewController id="yyA-hT-AJP" customClass="SportTableViewController" customModule="Sports_and_Players" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IGw-TZ-fKo">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="150" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="IGw-TZ-fKo">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -70,9 +70,14 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="sports" id="zXA-xx-zGD">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Odb-Tl-D0F"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="Odb-Tl-D0F">
+                            <connections>
+                                <action selector="add:" destination="yyA-hT-AJP" id="bU1-tm-1TL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="table" destination="IGw-TZ-fKo" id="zgr-Ta-3lz"/>
                         <segue destination="zPA-SZ-0io" kind="show" identifier="toplayer" id="1SF-Y1-TXI"/>
                     </connections>
                 </tableViewController>
@@ -104,8 +109,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="H2n-A5-Lhm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ufS-Yj-QH2"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="plus" catalog="system" id="ufS-Yj-QH2">
+                            <connections>
+                                <action selector="add:" destination="zPA-SZ-0io" id="8fD-HR-Wku"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="table" destination="Vd1-or-dHK" id="843-59-lyk"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bo2-40-OOe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
