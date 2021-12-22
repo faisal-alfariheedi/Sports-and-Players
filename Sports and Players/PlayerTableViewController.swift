@@ -86,6 +86,22 @@ class PlayerTableViewController: UITableViewController {
         }
         getpl()
     }
+    func edcrp(nam:String,age:String,hig:String,i:Int){
+        pllist[i]=Player(context: cr)
+        pllist[i].name=nam
+        pllist[i].age=age
+        pllist[i].hight=hig
+        pllist[i].sport=sp!
+        if cr.hasChanges {
+            do {
+                try cr.save()
+                print("Success")
+            } catch {
+                print("\(error)")
+            }
+        }
+        getpl()
+    }
     
     // MARK: - Table view data source
 
@@ -108,6 +124,38 @@ class PlayerTableViewController: UITableViewController {
 
         return cell
     }
+    override func tableView(_ tableView: UITableView, accessoryButtonTappedForRowWith indexPath: IndexPath) {
+        //1. Create the alert controller.
+        let alert = UIAlertController(title: "Some Title", message: "Enter a text", preferredStyle: .alert)
+
+        //2. Add the text field. You can configure it however you need.
+        alert.addTextField { (textField1) in
+            textField1.placeholder = "player name"
+        }
+        alert.addTextField { (textField2) in
+            textField2.placeholder = "age"
+        }
+        alert.addTextField { (textField3) in
+            textField3.placeholder = "hight"
+        }
+
+        // 3. Grab the value from the text field, and print it when the user clicks OK.
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { [self, weak alert] (_) in
+            let textfield1 = alert!.textFields![0] // Force unwrapping because we know it exists.
+            let textfield2 = alert!.textFields![1]
+            let textfield3 = alert!.textFields![2]
+            edcrp(nam: textfield1.text!, age: textfield3.text!, hig: textfield3.text!,i:indexPath.row)
+            print("Text field: \(textfield1.text)")
+        }))
+        alert.addAction(UIAlertAction(title: "cancel", style: .cancel, handler: { [self, weak alert] (_) in
+            print("cancel")
+        }))
+
+        // 4. Present the alert.
+        self.present(alert, animated: true, completion: nil)
+    }
+    }
+
     
 
     /*
