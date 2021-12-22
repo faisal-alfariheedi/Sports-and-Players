@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Player" representedClassName=".Player" syncable="YES" codeGenerationType="class">
+    <entity name="Player" representedClassName=".Player" syncable="YES">
         <attribute name="age" optional="YES" attributeType="String"/>
         <attribute name="hight" optional="YES" attributeType="String"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="sport" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Sport" inverseName="player" inverseEntity="Sport"/>
     </entity>
-    <entity name="Sport" representedClassName=".Sport" syncable="YES" codeGenerationType="class">
+    <entity name="Sport" representedClassName=".Sport" syncable="YES">
         <attribute name="img" optional="YES" attributeType="Binary"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <relationship name="player" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Player" inverseName="sport" inverseEntity="Player"/>
     </entity>
     <elements>
         <element name="Player" positionX="-54" positionY="-9" width="128" height="103"/>
-        <element name="Sport" positionX="-363.9810180664062" positionY="-107.0347900390625" width="128" height="74"/>
+        <element name="Sport" positionX="-363.9810180664062" positionY="-107.0347900390625" width="128" height="88"/>
     </elements>
 </model>

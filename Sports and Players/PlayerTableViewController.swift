@@ -16,7 +16,8 @@ class PlayerTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        getpl()
+        table.reloadData()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -28,7 +29,7 @@ class PlayerTableViewController: UITableViewController {
     func getpl(){
         
         let req=NSFetchRequest<NSFetchRequestResult>(entityName: "Player")
-        req.predicate = NSPredicate(format: "Family == %@", [sp])
+        req.predicate = NSPredicate(format: "sport == %@", sp!)
         do{
             let fet = try cr.fetch(req)
             pllist = fet as! [Player]
@@ -102,7 +103,7 @@ class PlayerTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "plcell", for: indexPath)
         
-        cell.textLabel?.text="\(pllist[indexPath.row].name) - Age:\(pllist[indexPath.row].age), Hight:\(pllist[indexPath.row].hight)"
+        cell.textLabel!.text="\(pllist[indexPath.row].name!) - Age:\(pllist[indexPath.row].age!), Hight:\(pllist[indexPath.row].hight!)"
         // Configure the cell...
 
         return cell

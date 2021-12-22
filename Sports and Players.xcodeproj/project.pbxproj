@@ -20,6 +20,10 @@
 		3A63E5B92770EE1E00205C27 /* SportTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5B82770EE1E00205C27 /* SportTableViewController.swift */; };
 		3A63E5BB2770EE3200205C27 /* PlayerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5BA2770EE3200205C27 /* PlayerTableViewController.swift */; };
 		3A63E5BD2770EEDC00205C27 /* main	TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A63E5BC2770EEDC00205C27 /* main	TableViewCell.swift */; };
+		3ABBCEC4277330140008F7A5 /* Player+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBCEC0277330140008F7A5 /* Player+CoreDataClass.swift */; };
+		3ABBCEC5277330140008F7A5 /* Player+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBCEC1277330140008F7A5 /* Player+CoreDataProperties.swift */; };
+		3ABBCEC6277330140008F7A5 /* Sport+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBCEC2277330140008F7A5 /* Sport+CoreDataClass.swift */; };
+		3ABBCEC7277330140008F7A5 /* Sport+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBCEC3277330140008F7A5 /* Sport+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +61,10 @@
 		3A63E5B82770EE1E00205C27 /* SportTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SportTableViewController.swift; sourceTree = "<group>"; };
 		3A63E5BA2770EE3200205C27 /* PlayerTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerTableViewController.swift; sourceTree = "<group>"; };
 		3A63E5BC2770EEDC00205C27 /* main	TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "main\tTableViewCell.swift"; sourceTree = "<group>"; };
+		3ABBCEC0277330140008F7A5 /* Player+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ABBCEC1277330140008F7A5 /* Player+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Player+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		3ABBCEC2277330140008F7A5 /* Sport+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sport+CoreDataClass.swift"; sourceTree = "<group>"; };
+		3ABBCEC3277330140008F7A5 /* Sport+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sport+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +115,10 @@
 		3A4A36DD277068CA00323806 /* Sports and Players */ = {
 			isa = PBXGroup;
 			children = (
+				3ABBCEC0277330140008F7A5 /* Player+CoreDataClass.swift */,
+				3ABBCEC1277330140008F7A5 /* Player+CoreDataProperties.swift */,
+				3ABBCEC2277330140008F7A5 /* Sport+CoreDataClass.swift */,
+				3ABBCEC3277330140008F7A5 /* Sport+CoreDataProperties.swift */,
 				3A4A36DE277068CA00323806 /* AppDelegate.swift */,
 				3A4A36E0277068CA00323806 /* SceneDelegate.swift */,
 				3A4A36E2277068CA00323806 /* ViewController.swift */,
@@ -272,10 +284,14 @@
 			files = (
 				3A4A36E3277068CA00323806 /* ViewController.swift in Sources */,
 				3A63E5B92770EE1E00205C27 /* SportTableViewController.swift in Sources */,
+				3ABBCEC5277330140008F7A5 /* Player+CoreDataProperties.swift in Sources */,
 				3A63E5BD2770EEDC00205C27 /* main	TableViewCell.swift in Sources */,
+				3ABBCEC6277330140008F7A5 /* Sport+CoreDataClass.swift in Sources */,
 				3A63E5BB2770EE3200205C27 /* PlayerTableViewController.swift in Sources */,
 				3A4A36DF277068CA00323806 /* AppDelegate.swift in Sources */,
 				3A4A36E1277068CA00323806 /* SceneDelegate.swift in Sources */,
+				3ABBCEC4277330140008F7A5 /* Player+CoreDataClass.swift in Sources */,
+				3ABBCEC7277330140008F7A5 /* Sport+CoreDataProperties.swift in Sources */,
 				3A4A36E9277068CA00323806 /* Sports_and_Players.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
